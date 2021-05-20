@@ -7,9 +7,9 @@ namespace FilmsWebApp.Models
 {
     public class FilmsGenres
     {
+        public int FilmsGenresId { get; set; }
         public int FilmId { get; set; }
         public int GenreId { get; set; }
-        public int FGId { get; set; }
 
         public virtual Film Film { get; set; }
         public virtual Genre Genre { get; set; }
