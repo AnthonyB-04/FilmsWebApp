@@ -34,7 +34,7 @@ function addFilm() {
         .then(response => response.json())
         .then(() => {
             getFilms();
-            addaddTitleTextbox.value = '';
+            addTitleTextbox.value = '';
             addYearTextbox.value = '';
             addRunTimeTextbox.value = '';
             addInfoTextbox.value = '';
@@ -119,19 +119,19 @@ function _displayFilms(data) {
         td1.appendChild(textNode);
 
         let td2 = tr.insertCell(1);
-        let textNode = document.createTextNode(film.year);
+        let textNodeYear = document.createTextNode(film.year);
         td2.appendChild(textNodeYear);
 
         let td3 = tr.insertCell(2);
-        let textNode = document.createTextNode(film.runtime);
+        let textNodeRunTime = document.createTextNode(film.runtime);
         td3.appendChild(textNodeRunTime);
 
         let td4 = tr.insertCell(3);
-        let textNodeInfo = document.createTextNode(film.description);
+        let textNodeDescription = document.createTextNode(film.description);
         td4.appendChild(textNodeDescription);
 
         let td5 = tr.insertCell(4);
-        let textNodeInfo = document.createTextNode(film.director);
+        let textNodeDirector = document.createTextNode(film.director);
         td5.appendChild(textNodeDirector);
 
         let td6 = tr.insertCell(5);
